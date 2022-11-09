@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap");
+header {
+  position: absolute;
+  background: transparent;
+  width: 100vw;
+  z-index: 3;
+  max-width: 1440px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+header nav {
+  display: flex;
+  width: 100%;
+  padding: 40px 50px;
+  align-items: center;
+}
+header nav .logo {
+  margin: auto;
+  z-index: -2;
+  height: 1.1rem;
+}
+header .nav-mobile-active {
+  transform: translateX(0) !important;
+}
+header .links-mobile {
+  transform: translateX(-100%);
+  z-index: -1;
+  position: absolute;
+  right: 0;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.367);
+  top: 0;
+  left: 0;
+  transition: 0.2s;
+}
+header .links-mobile ul {
+  position: absolute;
+  width: 100vw;
+  height: 100px;
+  background-color: rgb(255, 255, 255);
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+}
+header .links-mobile ul li {
+  margin: 0 15px;
+}
+
+@media (min-width: 1100px) {
+  header {
+    position: absolute;
+    background: transparent;
+    width: 100vw;
+    z-index: 3;
+  }
+  header nav {
+    display: flex;
+    width: 100%;
+  }
+  header nav .logo {
+    margin: 0;
+  }
+  header nav .desktop {
+    margin-left: 20px;
+    display: flex;
+  }
+  header nav .desktop li {
+    margin: 0 10px;
+    color: hsl(0deg, 0%, 100%);
+  }
+}
+* {
+  margin: 0%;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+main {
+  width: 100vw;
+  max-width: 1440px;
+  margin: auto;
+}
+
+.first-section {
+  width: 100%;
+  position: relative;
+}
+.first-section .hero {
+  width: 100%;
+  height: 100%;
+}
+.first-section .container-arrows {
+  position: absolute;
+  width: 130px;
+  height: 50px;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.first-section .container-arrows img {
+  cursor: pointer;
+}
+.first-section .container-arrows .left,
+.first-section .container-arrows .right {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  padding-top: 13px;
+  background: hsl(0deg, 0%, 0%);
+  cursor: pointer;
+}
+.first-section .container-arrows .left:hover,
+.first-section .container-arrows .right:hover {
+  background: hsl(0deg, 0%, 27%);
+}
+
+.second-section {
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.second-section h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.second-section p {
+  line-height: 20px;
+  color: hsl(0deg, 0%, 63%);
+  margin-bottom: 40px;
+}
+.second-section .shop-now {
+  text-transform: uppercase;
+  font-weight: bolder;
+  letter-spacing: 8px;
+  cursor: pointer;
+}
+.second-section .shop-now:hover {
+  color: hsl(0deg, 0%, 63%);
+}
+
+.third-section {
+  width: 100%;
+}
+.third-section img {
+  width: 100%;
+}
+
+.fourth-section {
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.fourth-section h2 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  letter-spacing: 5px;
+}
+.fourth-section p {
+  line-height: 20px;
+  color: hsl(0deg, 0%, 63%);
+  margin-bottom: 40px;
+}
+
+.fifth-section {
+  width: 100%;
+}
+.fifth-section img {
+  width: 100%;
+}
+
+.desktop {
+  height: 100% !important;
+  display: none;
+}
+
+@media (min-width: 1100px) {
+  main {
+    height: 650px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  .first-section {
+    grid-area: 1/1/3/5;
+    width: unset;
+    height: unset;
+  }
+  .first-section .container-arrows {
+    transform: translateX(130px);
+  }
+  .second-section {
+    grid-area: 1/5/3/8;
+    width: unset;
+    justify-content: center;
+  }
+  .third-section {
+    grid-area: 3/1/4/3;
+    width: unset;
+  }
+  .fourth-section {
+    grid-area: 3/3/4/6;
+    width: unset;
+  }
+  .fifth-section {
+    grid-area: 3/6/4/8;
+    width: unset;
+  }
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    height: 100% !important;
+    display: block;
+  }
+}/*# sourceMappingURL=style.css.map */
